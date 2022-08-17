@@ -1,3 +1,9 @@
-from django.shortcuts import render
+from django.views import generic
+from models import Quote
 
-# Create your views here.
+
+class QuoteListView(generic.ListView):
+    model = Quote
+    queryset = Quote.objects.all()
+    context_object_name = "quote_list"
+    template_name = "quotes/quote_list.html"
