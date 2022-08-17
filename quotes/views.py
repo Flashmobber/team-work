@@ -1,5 +1,5 @@
 from django.views import generic
-from models import Quote
+from .models import Quote
 
 
 class QuoteListView(generic.ListView):
